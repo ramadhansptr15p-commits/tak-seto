@@ -1,0 +1,547 @@
+/* ==========================================
+   1. RESET & VARIABEL UTAMA
+   ================================---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #0a2318;
+    --primary-green: #113f2f;
+    --accent-gold: #c5a059;
+    --accent-gold-hover: #b08d4b;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ================================---------- */
+header {
+    background-color: var(--primary-dark);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   3. HERO SECTION
+   ================================---------- */
+.hero {
+    background: linear-gradient(rgba(10, 35, 24, 0.8), rgba(10, 35, 24, 0.8)), url('NOESANTARA.png') center/cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+/* ==========================================
+   4. MENU GRID & CARD (UNTUK LAPTOP & HP)
+   ================================---------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 kolom di laptop */
+    gap: 25px;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Tinggi gambar seragam di laptop */
+    overflow: hidden;
+    background-color: #eaeaea;
+}
+
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar otomatis menyesuaikan kotak tanpa gepeng */
+    display: block;
+}
+
+/* Tombol Plus (+) & Minus (-) pada Gambar */
+.btn-plus-img {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10;
+}
+
+.btn-plus-img:hover {
+    background-color: var(--accent-gold-hover);
+    transform: scale(1.1);
+}
+
+.btn-minus-img {
+    position: absolute;
+    bottom: 12px;
+    right: 60px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #a94442;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10;
+}
+
+.btn-minus-img:hover {
+    background-color: #843534;
+    transform: scale(1.1);
+}
+
+.menu-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.menu-price {
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-size: 1rem;
+}
+
+.menu-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   5. MENU TABS
+   ================================---------- */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--accent-gold);
+    background: transparent;
+    color: var(--primary-dark);
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--white);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ==========================================
+   6. CABANG CARD & MAPS
+   ================================---------- */
+.cabang-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.map-container {
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.btn-wa {
+    display: block;
+    width: 100%;
+    background-color: #25d366;
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-wa:hover {
+    background-color: #1ebd59;
+}
+
+/* ==========================================
+   7. FORMULIR RESERVASI
+   ================================---------- */
+.reservation {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.reservation .section-title {
+    color: var(--white);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    color: var(--text-main);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--accent-gold);
+}
+
+/* ==========================================
+   8. FOOTER
+   ================================---------- */
+footer {
+    background-color: #061710;
+    color: #aaa;
+    padding: 50px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #1a3a2a;
+    padding-top: 20px;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   PERBAIKAN TAMPILAN KHUSUS HP (MOBILE FIX)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Atur ulang container agar tidak ada yang keluar batas layar */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. Header & Navigasi di HP */
+    header {
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    /* Sembunyikan menu teks panjang di atas agar tidak meluber */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Kecilkan logo & tombol pesan di header agar pas */
+    .brand-logo-img {
+        height: 38px;
+    }
+
+    .nav-container .btn-gold {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    /* 3. Grid Menu & Cabang (Pas 3 Kolom Sesuai Request) */
+    .menu-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .menu-card {
+        padding: 6px !important;
+        border-radius: 6px;
+    }
+
+    /* Ukuran gambar kotak proporsional */
+    .img-wrapper {
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 4px;
+    }
+
+    .menu-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Teks menu diperkecil agar muat 3 kolom */
+    .menu-info {
+        padding: 4px 2px !important;
+    }
+
+    .menu-header {
+        flex-direction: column !important;
+        gap: 2px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .menu-title {
+        font-size: 0.62rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .menu-price {
+        font-size: 0.62rem !important;
+    }
+
+    .menu-desc {
+        display: none !important; /* Deskripsi disembunyikan di HP agar kartu tetap rapi dan ringkas */
+    }
+
+    /* Tombol plus (+) dan minus (-) diperkecil dan diposisikan pas di sudut gambar */
+    .btn-plus-img {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 0.9rem !important;
+        bottom: 4px !important;
+        right: 4px !important;
+    }
+
+    .btn-minus-img {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 0.9rem !important;
+        bottom: 4px !important;
+        right: 30px !important;
+    }
+
+    /* 4. Perbaikan Card Cabang & Maps di HP */
+    .cabang-card .map-container iframe {
+        height: 90px !important;
+    }
+
+    .cabang-card .menu-desc {
+        display: block !important;
+        font-size: 0.65rem !important;
+    }
+
+    .btn-wa {
+        font-size: 0.7rem !important;
+        padding: 6px !important;
+    }
+}
