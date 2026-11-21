@@ -1,68 +1,60 @@
-/* ==========================================
-   1. RESET & VARIABEL UTAMA
-   ================================---------- */
+:root {
+    --primary-green: #12261c;
+    --secondary-green: #1c3829;
+    --accent-gold: #c69c53;
+    --accent-gold-hover: #b0863e;
+    --bg-cream: #f8f7f3;
+    --text-dark: #222222;
+    --text-muted: #666666;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-dark: #0a2318;
-    --primary-green: #113f2f;
-    --accent-gold: #c5a059;
-    --accent-gold-hover: #b08d4b;
-    --text-main: #333333;
-    --text-muted: #666666;
-    --bg-light: #f9f9f9;
-    --white: #ffffff;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--text-main);
-    background-color: var(--bg-light);
+    color: var(--text-dark);
+    background-color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-.section-padding {
-    padding: 60px 0;
-}
+.text-center { text-align: center; }
+.text-white { color: #ffffff; }
+.bg-cream { background-color: var(--bg-cream); }
+.bg-dark-green { background-color: var(--primary-green); }
+.section-padding { padding: 70px 0; }
 
-.section-subtitle {
-    text-align: center;
-    color: var(--accent-gold);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.section-title {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: var(--primary-dark);
-    margin-bottom: 40px;
-}
-
-/* ==========================================
-   2. HEADER & NAVIGATION
-   ================================---------- */
+/* Header & Navigasi */
 header {
-    background-color: var(--primary-dark);
-    padding: 15px 0;
+    background-color: var(--primary-green);
+    padding: 14px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
 }
 
 .nav-container {
@@ -71,30 +63,24 @@ header {
     align-items: center;
 }
 
-.brand-logo-container {
-    display: flex;
-    align-items: center;
-}
-
 .brand-logo-img {
-    width: 50px;
-    height: 50px;
+    height: 48px;
+    width: auto;
     border-radius: 50%;
     border: 2px solid var(--accent-gold);
-    object-fit: cover;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
-    align-items: center;
+    gap: 28px;
 }
 
 .nav-links a {
-    color: var(--white);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
@@ -104,444 +90,515 @@ header {
 
 .btn-gold {
     background-color: var(--accent-gold);
-    color: var(--white);
+    color: #ffffff;
     padding: 10px 22px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s, transform 0.2s;
-    border: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
     display: inline-block;
-    text-align: center;
-    cursor: pointer;
 }
 
 .btn-gold:hover {
     background-color: var(--accent-gold-hover);
-    transform: translateY(-2px);
 }
 
-/* ==========================================
-   3. HERO SECTION
-   ================================---------- */
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(10, 35, 24, 0.8), rgba(10, 35, 24, 0.8)), url('NOESANTARA.png') center/cover no-repeat;
-    color: var(--white);
+    background: linear-gradient(rgba(18, 38, 28, 0.78), rgba(18, 38, 28, 0.85)), url('NOESANTARA.png') center/cover no-repeat;
+    color: #ffffff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 110px 20px;
 }
 
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
+.hero-subtitle {
     color: var(--accent-gold);
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
 }
 
-.hero-content p {
+.hero h1 {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    max-width: 750px;
+    margin: 0 auto 18px;
+    line-height: 1.2;
+}
+
+.hero p {
     max-width: 600px;
-    margin: 0 auto 30px auto;
-    font-size: 1.1rem;
+    margin: 0 auto 30px;
+    font-size: 1.05rem;
     color: #e0e0e0;
 }
 
-/* ==========================================
-   4. MENU GRID & CARD (UNTUK LAPTOP & HP)
-   ================================---------- */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default 3 kolom di laptop */
-    gap: 25px;
-}
-
-.menu-card {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-}
-
-.img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 200px; /* Tinggi gambar seragam di laptop */
-    overflow: hidden;
-    background-color: #eaeaea;
-}
-
-.menu-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Gambar otomatis menyesuaikan kotak tanpa gepeng */
-    display: block;
-}
-
-/* Tombol Plus (+) & Minus (-) pada Gambar */
-.btn-plus-img {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: var(--accent-gold);
-    color: var(--white);
-    border: 2px solid var(--white);
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s, background-color 0.2s;
-    z-index: 10;
-}
-
-.btn-plus-img:hover {
-    background-color: var(--accent-gold-hover);
-    transform: scale(1.1);
-}
-
-.btn-minus-img {
-    position: absolute;
-    bottom: 12px;
-    right: 60px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: #a94442;
-    color: var(--white);
-    border: 2px solid var(--white);
-    font-size: 1.6rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s, background-color 0.2s;
-    z-index: 10;
-}
-
-.btn-minus-img:hover {
-    background-color: #843534;
-    transform: scale(1.1);
-}
-
-.menu-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.menu-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.menu-price {
-    font-weight: 700;
+/* Section Headers */
+.section-tag {
     color: var(--accent-gold);
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.menu-desc {
-    font-size: 0.9rem;
+.section-title {
+    font-size: 2.3rem;
+    color: var(--primary-green);
+    margin-bottom: 16px;
+}
+
+.bg-dark-green .section-title {
+    color: #ffffff;
+}
+
+.section-desc {
     color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 40px;
 }
 
-/* ==========================================
-   5. MENU TABS
-   ================================---------- */
+/* Menu Tabs */
 .menu-tabs {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
 }
 
 .tab-btn {
-    padding: 10px 25px;
+    padding: 10px 26px;
     border: 2px solid var(--accent-gold);
     background: transparent;
-    color: var(--primary-dark);
-    font-weight: 600;
+    color: var(--primary-green);
     border-radius: 30px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .tab-btn.active, .tab-btn:hover {
     background-color: var(--accent-gold);
-    color: var(--white);
+    color: #ffffff;
 }
 
-.tab-content {
+.menu-category {
     display: none;
 }
 
-.tab-content.active {
+.menu-category.active {
     display: block;
 }
 
-/* ==========================================
-   6. CABANG CARD & MAPS
-   ================================---------- */
-.cabang-card {
-    background: var(--white);
-    padding: 20px;
+/* Menu Grid (Desktop 3 Kolom) */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.menu-card {
+    background: #ffffff;
     border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-plus-img, .btn-minus-img {
+    position: absolute;
+    bottom: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.btn-plus-img {
+    right: 10px;
+    background-color: var(--accent-gold);
+}
+
+.btn-minus-img {
+    right: 50px;
+    background-color: #b94a48;
+}
+
+.menu-info {
+    padding: 18px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.menu-title {
+    font-size: 1.05rem;
+    color: var(--primary-green);
+}
+
+.menu-price {
+    font-weight: 700;
+    color: var(--accent-gold);
+    white-space: nowrap;
+}
+
+.menu-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Cabang Grid (Desktop 3 Kolom) */
+.cabang-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cabang-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabang-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary-green);
+    margin-bottom: 8px;
+}
+
+.cabang-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
 }
 
 .map-container {
-    margin: 15px 0;
+    width: 100%;
+    margin-bottom: 14px;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #ddd;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    display: block;
 }
 
 .btn-wa {
     display: block;
-    width: 100%;
-    background-color: #25d366;
-    color: var(--white);
     text-align: center;
+    background-color: #25d366;
+    color: #ffffff;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
+    font-size: 0.9rem;
 }
 
-.btn-wa:hover {
-    background-color: #1ebd59;
-}
-
-/* ==========================================
-   7. FORMULIR RESERVASI
-   ================================---------- */
-.reservation {
-    background-color: var(--primary-dark);
-    color: var(--white);
-}
-
-.reservation .section-title {
-    color: var(--white);
-}
-
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    color: var(--text-main);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* Reservasi Form */
+.form-box {
+    background: #ffffff;
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 35px;
+    border-radius: 16px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 16px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
     font-weight: 600;
-    color: var(--primary-dark);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--primary-green);
 }
 
-.form-control {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 1px solid #cccccc;
     border-radius: 8px;
     font-family: inherit;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
+    font-size: 0.95rem;
 }
 
-.form-control:focus {
-    border-color: var(--accent-gold);
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-/* ==========================================
-   8. FOOTER
-   ================================---------- */
+.btn-reset {
+    background-color: #b94a48;
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-submit {
+    background-color: var(--accent-gold);
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 2;
+}
+
+/* Footer */
 footer {
-    background-color: #061710;
-    color: #aaa;
-    padding: 50px 0 20px 0;
+    background-color: #0d1c14;
+    color: #cccccc;
+    padding: 50px 0 25px;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .footer-col h4 {
-    color: var(--white);
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', serif;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.btn-ig-footer {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid var(--accent-gold);
+    padding: 6px 16px;
+    border-radius: 20px;
 }
 
 .copyright {
     text-align: center;
-    border-top: 1px solid #1a3a2a;
+    border-top: 1px solid #1f362a;
     padding-top: 20px;
     font-size: 0.85rem;
 }
 
-/* =========================================
-   PERBAIKAN TAMPILAN KHUSUS HP (MOBILE FIX)
-   ========================================= */
+/* =========================================================
+   TAMPILAN KHUSUS HP (PAS LAYAR, MENU 3 KOLOM, CABANG 2 KOLOM)
+   ========================================================= */
 @media (max-width: 768px) {
-    /* 1. Atur ulang container agar tidak ada yang keluar batas layar */
-    body {
-        overflow-x: hidden;
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
     }
-    
+
     .container {
         width: 100% !important;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        box-sizing: border-box;
+        max-width: 100% !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
     }
 
-    /* 2. Header & Navigasi di HP */
-    header {
-        padding: 10px 0;
-    }
-
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-
-    /* Sembunyikan menu teks panjang di atas agar tidak meluber */
+    /* Header HP */
     .nav-links {
         display: none !important;
     }
 
-    /* Kecilkan logo & tombol pesan di header agar pas */
     .brand-logo-img {
         height: 38px;
     }
 
     .nav-container .btn-gold {
-        padding: 6px 10px;
-        font-size: 0.75rem;
-        white-space: nowrap;
+        padding: 7px 14px;
+        font-size: 0.8rem;
     }
 
-    /* 3. Grid Menu & Cabang (Pas 3 Kolom Sesuai Request) */
+    /* Hero HP */
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+    }
+
+    /* Menu Tabs HP */
+    .menu-tabs {
+        gap: 6px;
+    }
+
+    .tab-btn {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+    }
+
+    /* MENU GRID: 3 KOLOM PROPORSIONAL DI HP */
     .menu-grid {
-        display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 6px !important;
+        gap: 8px !important;
     }
 
     .menu-card {
-        padding: 6px !important;
-        border-radius: 6px;
+        border-radius: 8px;
     }
 
-    /* Ukuran gambar kotak proporsional */
     .img-wrapper {
         height: auto !important;
         aspect-ratio: 1 / 1 !important;
-        border-radius: 4px;
     }
 
-    .menu-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Teks menu diperkecil agar muat 3 kolom */
     .menu-info {
-        padding: 4px 2px !important;
+        padding: 6px;
     }
 
     .menu-header {
-        flex-direction: column !important;
-        gap: 2px !important;
-        margin-bottom: 2px !important;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 0;
     }
 
     .menu-title {
-        font-size: 0.62rem !important;
-        line-height: 1.1 !important;
+        font-size: 0.68rem;
+        line-height: 1.2;
     }
 
     .menu-price {
-        font-size: 0.62rem !important;
+        font-size: 0.68rem;
     }
 
     .menu-desc {
-        display: none !important; /* Deskripsi disembunyikan di HP agar kartu tetap rapi dan ringkas */
+        display: none;
     }
 
-    /* Tombol plus (+) dan minus (-) diperkecil dan diposisikan pas di sudut gambar */
     .btn-plus-img {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 0.9rem !important;
-        bottom: 4px !important;
-        right: 4px !important;
+        width: 24px;
+        height: 24px;
+        font-size: 0.95rem;
+        bottom: 5px;
+        right: 5px;
     }
 
     .btn-minus-img {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 0.9rem !important;
-        bottom: 4px !important;
-        right: 30px !important;
+        width: 24px;
+        height: 24px;
+        font-size: 0.95rem;
+        bottom: 5px;
+        right: 33px;
     }
 
-    /* 4. Perbaikan Card Cabang & Maps di HP */
-    .cabang-card .map-container iframe {
-        height: 90px !important;
+    /* CABANG GRID: 2 KOLOM UKURAN SEDANG DI HP */
+    .cabang-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
 
-    .cabang-card .menu-desc {
-        display: block !important;
-        font-size: 0.65rem !important;
+    .cabang-card {
+        padding: 12px;
+    }
+
+    .cabang-card h3 {
+        font-size: 0.88rem;
+        line-height: 1.25;
+    }
+
+    .cabang-card p {
+        font-size: 0.72rem;
+        line-height: 1.35;
+        margin-bottom: 10px;
+    }
+
+    .map-container iframe {
+        height: 135px !important; /* Ukuran sedang & jelas */
     }
 
     .btn-wa {
-        font-size: 0.7rem !important;
-        padding: 6px !important;
+        font-size: 0.75rem;
+        padding: 8px 6px;
+    }
+
+    /* Form Reservasi HP */
+    .form-box {
+        padding: 20px 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    /* Footer HP */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
     }
 }

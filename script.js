@@ -1,115 +1,105 @@
-function openMenu(evt, categoryName) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
+let keranjang = {};
+
+// Pindah kategori menu (Makanan Utama, Minuman, Dessert)
+function bukaKategori(evt, namaKategori) {
+    const semuaKategori = document.getElementsByClassName("menu-category");
+    for (let i = 0; i < semuaKategori.length; i++) {
+        semuaKategori[i].classList.remove("active");
     }
-    tablinks = document.getElementsByClassName("tab-btn");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
+
+    const semuaTab = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < semuaTab.length; i++) {
+        semuaTab[i].classList.remove("active");
     }
-    document.getElementById(categoryName).classList.add("active");
+
+    document.getElementById(namaKategori).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
 
-const daftarCabang = [
-    { nama: "Neosantara - Bandung (Cisangkuy)", alamat: "Jl. Cisangkuy No.60, Bandung", wa: "62895403299384" },
-    { nama: "Neosantara - Bekasi Utara", alamat: "Jl. Bulevar Bekasi CBD, Bekasi", wa: "6285869015168" },
-    { nama: "Neosantara - Jakarta Selatan", alamat: "Jl. Ampera Raya No.9, Jakarta Selatan", wa: "6289504156425" },
-    { nama: "Neosantara - Makassar", alamat: "Jl. Mutiara Boulevard, Makassar", wa: "6282124960502" },
-    { nama: "Neosantara - Jakarta Utara", alamat: "Jl. Yos Sudarso Lorong X, Jakarta Utara", wa: "6287786917494" },
-    { nama: "Neosantara - Bandar Lampung", alamat: "Jl. Griya Utama No. 57, Lampung", wa: "6283193450697" }
-];
-
-let daftarPesanan = {};
-
-// Tambah Pesanan (+)
+// Tambah menu (+)
 function pilihMenu(namaMenu, harga) {
-    if (daftarPesanan[namaMenu]) {
-        daftarPesanan[namaMenu].qty += 1;
+    if (keranjang[namaMenu]) {
+        keranjang[namaMenu].jumlah += 1;
     } else {
-        daftarPesanan[namaMenu] = { qty: 1, harga: harga };
+        keranjang[namaMenu] = {
+            harga: harga,
+            jumlah: 1
+        };
     }
     perbaruiTampilanPesanan();
 }
 
-// Kurang/Batalkan Pesanan (-)
+// Kurang menu (-)
 function kurangMenu(namaMenu, harga) {
-    if (daftarPesanan[namaMenu]) {
-        daftarPesanan[namaMenu].qty -= 1;
-        if (daftarPesanan[namaMenu].qty <= 0) {
-            delete daftarPesanan[namaMenu];
+    if (keranjang[namaMenu]) {
+        keranjang[namaMenu].jumlah -= 1;
+        if (keranjang[namaMenu].jumlah <= 0) {
+            delete keranjang[namaMenu];
         }
+        perbaruiTampilanPesanan();
     }
-    perbaruiTampilanPesanan();
 }
 
-// Perbarui Tampilan Input dan Harga Otomatis
+// Update kolom input menu & total harga di formulir reservasi
 function perbaruiTampilanPesanan() {
-    let ringkasan = [];
-    let totalBayar = 0;
+    const daftarItem = [];
+    let totalHarga = 0;
 
-    for (let menu in daftarPesanan) {
-        let item = daftarPesanan[menu];
-        ringkasan.push(`${item.qty}x ${menu}`);
-        totalBayar += item.qty * item.harga;
+    for (const [nama, detail] of Object.entries(keranjang)) {
+        daftarItem.push(`${nama} (${detail.jumlah}x)`);
+        totalHarga += detail.harga * detail.jumlah;
     }
 
-    const inputPesanan = document.getElementById('pesanan');
-    if (inputPesanan) {
-        inputPesanan.value = ringkasan.join(', ');
-    }
+    const menuInput = document.getElementById("menuInput");
+    const totalPriceInput = document.getElementById("totalPriceInput");
 
-    const inputTotal = document.getElementById('totalHarga');
-    if (inputTotal) {
-        inputTotal.value = `Rp ${totalBayar.toLocaleString('id-ID')}`;
+    if (menuInput) {
+        menuInput.value = daftarItem.join(", ");
+    }
+    if (totalPriceInput) {
+        totalPriceInput.value = "Rp " + totalHarga.toLocaleString("id-ID");
     }
 }
 
-// Reset Pesanan
+// Reset semua pesanan
 function resetPesanan() {
-    daftarPesanan = {};
+    keranjang = {};
     perbaruiTampilanPesanan();
-    alert("Pesanan berhasil direset.");
 }
 
-function pesanSekarangCabang(indexCabang) {
-    const cabang = daftarCabang[indexCabang];
-    const teksPesan = `Halo Admin *${cabang.nama}*,\nSaya ingin memesan menu Neosantara. Mohon info ketersediaannya, terima kasih!`;
-    window.open(`https://wa.me/${cabang.wa}?text=${encodeURIComponent(teksPesan)}`, '_blank');
-}
-
+// Kirim pesanan ke WhatsApp cabang terpilih
 function handleReservation(event) {
     event.preventDefault();
-    
-    const indexCabang = document.getElementById('cabangPilihan').value;
-    const cabang = daftarCabang[indexCabang];
-    const nama = document.getElementById('nama').value;
-    const pesanan = document.getElementById('pesanan').value;
-    const totalHarga = document.getElementById('totalHarga').value;
-    const jumlah = document.getElementById('jumlah').value;
-    const tanggal = document.getElementById('tanggal').value;
-    const jam = document.getElementById('jam').value;
-    const pembayaran = document.getElementById('pembayaran').value;
-    const catatan = document.getElementById('catatan').value || "Tidak ada catatan khusus";
 
-    if (!pesanan) {
-        alert("Silakan pilih menu terlebih dahulu dengan menekan tombol (+) pada gambar menu!");
+    const branchData = document.getElementById("branchSelect").value.split("|");
+    const waNumber = branchData[0];
+    const branchName = branchData[1];
+
+    const custName = document.getElementById("custName").value;
+    const menuOrdered = document.getElementById("menuInput").value;
+    const totalPrice = document.getElementById("totalPriceInput").value;
+    const guestCount = document.getElementById("guestCount").value;
+    const visitDate = document.getElementById("visitDate").value;
+    const visitTime = document.getElementById("visitTime").value;
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const notes = document.getElementById("notes").value || "-";
+
+    if (!menuOrdered) {
+        alert("Silakan pilih minimal 1 menu dengan menekan tombol + pada gambar menu.");
         return;
     }
 
-    let teksPesan = `Halo Admin *${cabang.nama}*,\n` +
-                    `Alamat: ${cabang.alamat}\n\n` +
-                    `*Data Pemesanan & Reservasi:*\n` +
-                    `- Nama: ${nama}\n` +
-                    `- Menu Dipesan: ${pesanan}\n` +
-                    `- *Total Pembayaran: ${totalHarga}*\n` +
-                    `- Jumlah Tamu: ${jumlah} Orang\n` +
-                    `- Tanggal: ${tanggal}\n` +
-                    `- Waktu: ${jam} WIB\n` +
-                    `- Pembayaran: ${pembayaran}\n` +
-                    `- Catatan Khusus: ${catatan}\n\n` +
-                    `Mohon konfirmasi pesanan saya, terima kasih!`;
+    const pesan = `Halo *${branchName}*, saya ingin melakukan pemesanan/reservasi:%0A%0A` +
+        `*Nama:* ${custName}%0A` +
+        `*Menu Dipesan:* ${menuOrdered}%0A` +
+        `*Total Harga:* ${totalPrice}%0A` +
+        `*Jumlah Tamu:* ${guestCount} Orang%0A` +
+        `*Tanggal:* ${visitDate}%0A` +
+        `*Jam:* ${visitTime}%0A` +
+        `*Pembayaran:* ${paymentMethod}%0A` +
+        `*Catatan:* ${notes}%0A%0A` +
+        `Terima kasih!`;
 
-    window.open(`https://wa.me/${cabang.wa}?text=${encodeURIComponent(teksPesan)}`, '_blank');
+    const waUrl = `https://wa.me/${waNumber}?text=${pesan}`;
+    window.open(waUrl, "_blank");
 }

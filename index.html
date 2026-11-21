@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEOSANTARA - Traditional Food & Modern Dining</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS External -->
+    <title>NEOSANTARA - Traditional Food & Modern Luxury</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header Navigation -->
+    <!-- Header Navigation -->
     <header>
         <div class="container nav-container">
             <a href="#" class="brand-logo-container">
@@ -34,336 +28,324 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <p class="section-subtitle">Traditional Food & Modern Taste</p>
+            <span class="hero-subtitle">TRADITIONAL FOOD & MODERN TASTE</span>
             <h1>Kelezatan Kuliner Nusantara Harga Terjangkau</h1>
             <p>Nikmati hidangan autentik khas Indonesia dengan bahan-bahan pilihan berkualitas tinggi namun tetap ramah di kantong.</p>
             <a href="#menu" class="btn-gold">Lihat Menu & Harga</a>
         </div>
     </section>
 
-    <!-- Cabang & Kontak Section -->
-    <section id="cabang" class="section-padding" style="background-color: #fff;">
-        <div class="container">
-            <p class="section-subtitle">Jaringan Restoran</p>
-            <h2 class="section-title">Pilih Cabang Terdekat Kami</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Peta lokasi dan tombol WhatsApp langsung untuk setiap cabang.</p>
-            
-            <div class="menu-grid">
-                <!-- 1. Bandung -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Bandung</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Cisangkuy No.60, Citarum, Kec. Bandung Wetan</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798481283627!2d107.6190!3d-6.9034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e639cfc1a5b1%3A0x808542c38865ad60!2sJl.%20Cisangkuy%20No.60!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(0)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-                <!-- 2. Bekasi Utara -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Bekasi Utara</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Bulevar Bekasi CBD, Marga Mulya</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3!2d106.9!3d-6.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNTQnMDAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(1)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-                <!-- 3. Jakarta Selatan -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Jakarta Selatan</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Ampera Raya No.9, Cilandak Tim.</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8!2d106.8!3d-6.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnMDAuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(2)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-                <!-- 4. Makassar -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Makassar</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Mutiara Boulevard, Biringkanaya</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7!2d119.5!3d-5.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDYnMDAuMCJTIDExOWKwMzAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(3)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-                <!-- 5. Jakarta Utara -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Jakarta Utara</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Yos Sudarso Lorong X No. 1, Koja</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8!2d106.89!3d-6.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDcnMTIsMCJTIDEwNsKwNTMnMjQuMCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(4)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-                <!-- 6. Bandar Lampung -->
-                <div class="menu-card cabang-card">
-                    <div class="menu-info">
-                        <h3 class="menu-title">Neosantara - Bandar Lampung</h3>
-                        <p class="menu-desc"><strong>Alamat:</strong> Jl. Griya Utama No. 57, Way Halim</p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d105.28!3d-5.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjInNDguMCJTIDEwX8KwMTYnNDguMCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <button onclick="pesanSekarangCabang(5)" class="btn-wa">Pesan via WhatsApp</button>
-                    </div>
-                </div>
-            </div>
+    <!-- Tentang Section -->
+    <section id="tentang" class="section-padding">
+        <div class="container text-center">
+            <span class="section-tag">FILOSOFI KAMI</span>
+            <h2 class="section-title">Warisan Rasa Asli Indonesia</h2>
+            <p class="section-desc">Neosantara hadir membawa cita rasa masakan tradisional dari Sabang sampai Merauke dengan sentuhan penyajian modern yang elegan, nyaman untuk keluarga maupun acara spesial.</p>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section-padding">
+    <!-- Menu Section (54 Menu) -->
+    <section id="menu" class="section-padding bg-cream">
         <div class="container">
-            <p class="section-subtitle">Menu Pilihan</p>
-            <h2 class="section-title">Daftar Menu & Harga Terjangkau</h2>
-
-            <!-- Menu Tabs -->
-            <div class="menu-tabs">
-                <button class="tab-btn active" onclick="openMenu(event, 'makanan')">Makanan Utama</button>
-                <button class="tab-btn" onclick="openMenu(event, 'minuman')">Minuman</button>
-                <button class="tab-btn" onclick="openMenu(event, 'dessert')">Dessert</button>
+            <div class="text-center">
+                <span class="section-tag">MENU PILIHAN</span>
+                <h2 class="section-title">Daftar Menu & Harga Terjangkau</h2>
             </div>
 
-            <!-- Tab Content: Makanan (12 Menu) -->
-            <div id="makanan" class="tab-content active">
+            <!-- Filter Kategori -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="bukaKategori(event, 'makanan')">Makanan Utama</button>
+                <button class="tab-btn" onclick="bukaKategori(event, 'minuman')">Minuman</button>
+                <button class="tab-btn" onclick="bukaKategori(event, 'dessert')">Dessert</button>
+            </div>
+
+            <!-- KATEGORI 1: MAKANAN UTAMA (18 MENU) -->
+            <div id="makanan" class="menu-category active">
                 <div class="menu-grid">
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="nasi goreng.jpg" alt="Nasi Goreng" class="menu-img">
+                            <img src="nasi goreng.jpg" alt="Nasi Goreng Spesial Nusantara" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Goreng Spesial Nusantara', 35000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Goreng Spesial Nusantara', 35000)">+</button>
                         </div>
                         <div class="menu-info">
                             <div class="menu-header"><h3 class="menu-title">Nasi Goreng Spesial Nusantara</h3><span class="menu-price">Rp 35.000</span></div>
-                            <p class="menu-desc">Nasi goreng bumbu rempah tradisional lengkap dengan telur mata sapi.</p>
+                            <p class="menu-desc">Nasi goreng bumbu rempah autentik dengan sate ayam, telur mata sapi, dan kerupuk udang.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="soto betawi.jpg" alt="Soto Betawi" class="menu-img">
+                            <img src="soto betawi.jpg" alt="Nasi Soto Betawi" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Soto Betawi', 36000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Soto Betawi', 36000)">+</button>
                         </div>
                         <div class="menu-info">
                             <div class="menu-header"><h3 class="menu-title">Nasi Soto Betawi</h3><span class="menu-price">Rp 36.000</span></div>
-                            <p class="menu-desc">Daging sapi empuk dengan kuah santan dan susu gurih rempah.</p>
+                            <p class="menu-desc">Kuah santan susu gurih kaya rempah dengan potongan daging sapi empuk dan emping.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="ayam bakar.jpg" alt="Ayam Bakar" class="menu-img">
+                            <img src="ayam bakar.jpg" alt="Ayam Bakar Madu Pejantan" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Ayam Bakar Madu Pejantan', 22000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Ayam Bakar Madu Pejantan', 22000)">+</button>
                         </div>
                         <div class="menu-info">
                             <div class="menu-header"><h3 class="menu-title">Ayam Bakar Madu Pejantan</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Ayam pejantan empuk berbumbu rempah dengan olesan madu murni.</p>
+                            <p class="menu-desc">Ayam kampung muda bakar olesan madu hutan, lalapan segar, dan sambal terasi dadak.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="lele.jpg" alt="Pecel Lele" class="menu-img">
+                            <img src="pecel lele.jpg" alt="Nasi Pecel Lele Kremes" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Pecel Lele Kremes', 28000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Pecel Lele Kremes', 28000)">+</button>
                         </div>
                         <div class="menu-info">
                             <div class="menu-header"><h3 class="menu-title">Nasi Pecel Lele Kremes</h3><span class="menu-price">Rp 28.000</span></div>
-                            <p class="menu-desc">Ikan lele goreng garing disajikan dengan lalapan segar.</p>
+                            <p class="menu-desc">Lele goreng garing berbumbu kunyit dengan taburan kremesan renyah dan sambal tomat.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="rendang.avif" alt="Rendang" class="menu-img">
+                            <img src="rendang.jpg" alt="Nasi Rendang Daging Minang" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Rendang Daging Minang', 45000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Rendang Daging Minang', 45000)">+</button>
                         </div>
                         <div class="menu-info">
                             <div class="menu-header"><h3 class="menu-title">Nasi Rendang Daging Minang</h3><span class="menu-price">Rp 45.000</span></div>
-                            <p class="menu-desc">Potongan daging sapi empuk dimasak perlahan dengan santan.</p>
+                            <p class="menu-desc">Daging sapi pilihan dimasak perlahan dengan santan dan rempah Minang, daun singkong, dan sambal ijo.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="iga bakar.jpg" alt="Iga Bakar Madu Nusantara" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Iga Bakar Madu Nusantara', 68000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Iga Bakar Madu Nusantara', 68000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Iga Bakar Madu Nusantara', 48000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Iga Bakar Madu Nusantara', 48000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Iga Bakar Madu Nusantara</h3><span class="menu-price">Rp 68.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Iga Bakar Madu Nusantara</h3><span class="menu-price">Rp 48.000</span></div>
                             <p class="menu-desc">Iga sapi empuk dibakar dengan bumbu rempah dan madu murni, lengkap dengan kuah kaldu.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="ayam betutu.jpg" alt="Ayam Betutu Gilimanuk" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Ayam Betutu Gilimanuk', 65000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Ayam Betutu Gilimanuk', 65000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Ayam Betutu Gilimanuk', 35000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Ayam Betutu Gilimanuk', 35000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Ayam Betutu Gilimanuk</h3><span class="menu-price">Rp 65.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Ayam Betutu Gilimanuk</h3><span class="menu-price">Rp 35.000</span></div>
                             <p class="menu-desc">Ayam bumbu base genep khas Bali lengkap dengan plecing kangkung dan sambal matah.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="gurame asam manis.jpg" alt="Gurame Terbang Asam Manis" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Gurame Terbang Asam Manis', 50000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Gurame Terbang Asam Manis', 50000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Gurame Terbang Asam Manis', 45000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Gurame Terbang Asam Manis', 45000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Gurame Terbang Asam Manis</h3><span class="menu-price">Rp 50.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Gurame Terbang Asam Manis</h3><span class="menu-price">Rp 45.000</span></div>
                             <p class="menu-desc">Ikan gurame goreng renyah dengan siraman saus asam manis segar nanas dan paprika.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="bebek goreng.jpg" alt="Bebek Goreng Sambal Hitam" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bebek Goreng Sambal Hitam', 58000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bebek Goreng Sambal Hitam', 58000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bebek Goreng Sambal Hitam', 38000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bebek Goreng Sambal Hitam', 38000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Bebek Goreng Sambal Hitam</h3><span class="menu-price">Rp 58.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Bebek Goreng Sambal Hitam</h3><span class="menu-price">Rp 38.000</span></div>
                             <p class="menu-desc">Bebek ungkep empuk gurih khas Madura disajikan dengan bumbu hitam kaya rempah.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="nasi campur bali.jpg" alt="Nasi Campur Bali Komplit" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Campur Bali Komplit', 56000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Campur Bali Komplit', 56000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Campur Bali Komplit', 36000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Campur Bali Komplit', 36000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Nasi Campur Bali Komplit</h3><span class="menu-price">Rp 56.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Nasi Campur Bali Komplit</h3><span class="menu-price">Rp 36.000</span></div>
                             <p class="menu-desc">Nasi hangat dengan sate lilit, ayam suwir bumbu Bali, lawar, dan telur pindang.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="coto makassar.jpg" alt="Coto Makassar Ketupat" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Coto Makassar Ketupat', 74000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Coto Makassar Ketupat', 74000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Coto Makassar Ketupat', 34000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Coto Makassar Ketupat', 34000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Coto Makassar Ketupat</h3><span class="menu-price">Rp 74.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Coto Makassar Ketupat</h3><span class="menu-price">Rp 34.000</span></div>
                             <p class="menu-desc">Sup daging sapi berkuah kacang sangrai gurih khas Sulawesi disajikan dengan ketupat.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="pempek.jpg" alt="Pempek" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Pempek Kapal Selam Palembang', 36000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Pempek Kapal Selam Palembang', 36000)">+</button>
+                            <img src="sate maranggi.jpg" alt="Sate Maranggi Purwakarta" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Sate Maranggi Purwakarta', 38000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Sate Maranggi Purwakarta', 38000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Pempek Kapal Selam Palembang</h3><span class="menu-price">Rp 36.000</span></div>
-                            <p class="menu-desc">Pempek ikan tenggiri asli berisi telur, lengkap dengan cuko.</p>
+                            <div class="menu-header"><h3 class="menu-title">Sate Maranggi Purwakarta</h3><span class="menu-price">Rp 38.000</span></div>
+                            <p class="menu-desc">Sate daging sapi marinasi rempah manis gurih disajikan dengan sambal tomat segar.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="nasi bakar ayam kemangi.jpg" alt="Nasi Bakar" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Bakar Ayam Kemangi', 66000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Bakar Ayam Kemangi', 66000)">+</button>
+                            <img src="rawon.jpg" alt="Rawon Daging Surabaya" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Rawon Daging Surabaya', 37000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Rawon Daging Surabaya', 37000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Nasi Bakar Ayam Kemangi</h3><span class="menu-price">Rp 66.000</span></div>
-                            <p class="menu-desc">Nasi gurih berempah dengan suwiran ayam dan daun kemangi.</p>
+                            <div class="menu-header"><h3 class="menu-title">Rawon Daging Surabaya</h3><span class="menu-price">Rp 37.000</span></div>
+                            <p class="menu-desc">Sup daging sapi kuah hitam kluwek khas Jawa Timur dengan telur asin dan tauge pendek.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="sop buntut sapi.jpg" alt="Sop Buntut" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Sop Buntut Sapi Kuah Rempah', 88000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Sop Buntut Sapi Kuah Rempah', 88000)">+</button>
+                            <img src="gudeg.jpg" alt="Nasi Gudeg Jogja Komplit" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Gudeg Jogja Komplit', 35000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Gudeg Jogja Komplit', 35000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Sop Buntut Sapi Kuah Rempah</h3><span class="menu-price">Rp 88.000</span></div>
-                            <p class="menu-desc">Potongan buntut sapi empuk disajikan dalam kuah rempah.</p>
+                            <div class="menu-header"><h3 class="menu-title">Nasi Gudeg Jogja Komplit</h3><span class="menu-price">Rp 35.000</span></div>
+                            <p class="menu-desc">Nangka muda masak manis gurih dengan krecek pedas, opor ayam, dan telur pindang.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Nasi Liwet Solo Komplit.jpg" alt="Nasi Liwet" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Liwet Solo Komplit', 78000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Liwet Solo Komplit', 78000)">+</button>
+                            <img src="sop buntut.jpg" alt="Sop Buntut Kuah Rempah" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Sop Buntut Kuah Rempah', 55000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Sop Buntut Kuah Rempah', 55000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Nasi Liwet Solo Komplit</h3><span class="menu-price">Rp 78.000</span></div>
-                            <p class="menu-desc">Nasi gurih santan khas Solo dengan sayur labu siam.</p>
+                            <div class="menu-header"><h3 class="menu-title">Sop Buntut Kuah Rempah</h3><span class="menu-price">Rp 55.000</span></div>
+                            <p class="menu-desc">Potongan buntut sapi empuk dalam kuah kaldu bening beraroma pala dan cengkeh.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="gudeg.jpg" alt="Gudeg" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Gudeg Jogja Komplit', 78000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Gudeg Jogja Komplit', 78000)">+</button>
+                            <img src="nasi liwet.jpg" alt="Nasi Liwet Solo Komplit" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Liwet Solo Komplit', 34000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Liwet Solo Komplit', 34000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Nasi Gudeg Jogja Komplit</h3><span class="menu-price">Rp 78.000</span></div>
-                            <p class="menu-desc">Nangka muda manis gurih berpadu krecek pedas.</p>
+                            <div class="menu-header"><h3 class="menu-title">Nasi Liwet Solo Komplit</h3><span class="menu-price">Rp 34.000</span></div>
+                            <p class="menu-desc">Nasi gurih santan disajikan dengan suwiran ayam opor, sayur labu siam, dan areh.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="sate madura.jpg" alt="Sate" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Sate Ayam Madura', 58000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Sate Ayam Madura', 58000)">+</button>
+                            <img src="pempek.jpg" alt="Pempek Kapal Selam Palembang" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Pempek Kapal Selam Palembang', 28000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Pempek Kapal Selam Palembang', 28000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Sate Ayam Madura</h3><span class="menu-price">Rp 58.000</span></div>
-                            <p class="menu-desc">Daging ayam empuk dibakar harum dengan bumbu kacang.</p>
+                            <div class="menu-header"><h3 class="menu-title">Pempek Kapal Selam Palembang</h3><span class="menu-price">Rp 28.000</span></div>
+                            <p class="menu-desc">Pempek ikan tenggiri asli isi telur dengan kuah cuko pedas manis dan mie kuning.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="rawon.jpg" alt="Rawon" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Nasi Rawon Empal', 64000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Nasi Rawon Empal', 64000)">+</button>
+                            <img src="mie aceh.jpg" alt="Mie Aceh Tumis Daging" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Mie Aceh Tumis Daging', 32000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Mie Aceh Tumis Daging', 32000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Nasi Rawon Empal</h3><span class="menu-price">Rp 64.000</span></div>
-                            <p class="menu-desc">Nasi hangat dengan kuah rawon kluwek gurih.</p>
+                            <div class="menu-header"><h3 class="menu-title">Mie Aceh Tumis Daging</h3><span class="menu-price">Rp 32.000</span></div>
+                            <p class="menu-desc">Mie kuning tebal dimasak bumbu kari rempah Aceh dengan potongan daging sapi dan emping.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab Content: Minuman (12 Menu) -->
-            <div id="minuman" class="tab-content">
+            <!-- KATEGORI 2: MINUMAN (18 MENU) -->
+            <div id="minuman" class="menu-category">
                 <div class="menu-grid">
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="es teh manis melati.jpg" alt="Es Teh" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Teh Manis Melati', 22000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Teh Manis Melati', 22000)">+</button>
+                            <img src="avocado coffee.jpg" alt="Avocado Coffee Nusantara" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Avocado Coffee Nusantara', 26000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Avocado Coffee Nusantara', 26000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Teh Manis Melati</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Teh melati pilihan disajikan dingin menyegarkan.</p>
+                            <div class="menu-header"><h3 class="menu-title">Avocado Coffee Nusantara</h3><span class="menu-price">Rp 26.000</span></div>
+                            <p class="menu-desc">Perpaduan buah alpukat mentega segar yang dihaluskan creamy dengan espresso khas Nusantara dan lelehan gula aren murni.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="Kopi Gayo.jpg" alt="Kopi Gayo Aceh" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Gayo Aceh', 22000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Gayo Aceh', 22000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Kopi Gayo Aceh</h3><span class="menu-price">Rp 22.000</span></div>
+                            <p class="menu-desc">Seduhan biji kopi Arabika Gayo pilihan dengan aroma kuat dan cita rasa elegan.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="Kopi Tarik.jpg" alt="Kopi Tarik Melaka" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Tarik Melaka', 20000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Tarik Melaka', 20000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Kopi Tarik Melaka</h3><span class="menu-price">Rp 20.000</span></div>
+                            <p class="menu-desc">Kopi susu creamy berbusa lembut dengan sentuhan gula melaka asli.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="Es Campur Nusantara.jpg" alt="Es Campur Nusantara" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Campur Nusantara', 22000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Campur Nusantara', 22000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Es Campur Nusantara</h3><span class="menu-price">Rp 22.000</span></div>
+                            <p class="menu-desc">Es serut segar dengan alpukat, nangka, kelapa muda, cincau, dan sirup cocopandan.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="Es Kelapa Muda.jpg" alt="Es Kelapa Muda Gula Aren" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Kelapa Muda Gula Aren', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Kelapa Muda Gula Aren', 18000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Es Kelapa Muda Gula Aren</h3><span class="menu-price">Rp 18.000</span></div>
+                            <p class="menu-desc">Air dan daging kelapa muda segar dipadukan dengan sirup gula aren murni.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="Chocolate Milk.jpg" alt="Es Cokelat Klasik" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Cokelat Klasik', 21000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Cokelat Klasik', 21000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Es Cokelat Klasik</h3><span class="menu-price">Rp 21.000</span></div>
+                            <p class="menu-desc">Minuman cokelat pekat khas Nusantara dengan susu segar dingin yang lembut.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
                             <img src="wedang uwuh.jpg" alt="Wedang Uwuh Rempah" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Wedang Uwuh Rempah', 28000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Wedang Uwuh Rempah', 28000)">+</button>
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Wedang Uwuh Rempah', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Wedang Uwuh Rempah', 18000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Wedang Uwuh Rempah</h3><span class="menu-price">Rp 28.000</span></div>
+                            <div class="menu-header"><h3 class="menu-title">Wedang Uwuh Rempah</h3><span class="menu-price">Rp 18.000</span></div>
                             <p class="menu-desc">Minuman tradisional hangat dari kayu secang, jahe, cengkeh, dan gula batu.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="es kuwut.png" alt="Es Kuwut Bali Segar" class="menu-img">
+                            <img src="es kuwut.jpg" alt="Es Kuwut Bali Segar" class="menu-img">
                             <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Kuwut Bali Segar', 20000)">-</button>
                             <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Kuwut Bali Segar', 20000)">+</button>
                         </div>
@@ -396,13 +378,13 @@
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="avocado coffee.jpg" alt="Avocado Coffee" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Avocado Coffee', 26000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Avocado Coffee', 26000)">+</button>
+                            <img src="jus alpukat.jpg" alt="Jus Alpukat Kocok Gula Aren" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Jus Alpukat Kocok Gula Aren', 24000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Jus Alpukat Kocok Gula Aren', 24000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Avocado Coffee</h3><span class="menu-price">Rp 26.000</span></div>
-                            <p class="menu-desc">Perpaduan sempurna antara buah alpukat mentega segar yang dihaluskan creamy, berpadu dengan espresso khas Nusantara yang kuat dan aromatik. Disiram dengan lelehan gula aren murni dan susu segar, menciptakan sensasi rasa manis, pahit kopi, dan gurih yang meleleh di mulut dalam setiap tegukan.</p>
+                            <div class="menu-header"><h3 class="menu-title">Jus Alpukat Kocok Gula Aren</h3><span class="menu-price">Rp 24.000</span></div>
+                            <p class="menu-desc">Alpukat mentega lembut dikocok dengan es serut, susu cokelat, dan gula aren.</p>
                         </div>
                     </div>
                     <div class="menu-card">
@@ -418,140 +400,129 @@
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="cendol susu.jpg" alt="Cendol" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Cendol Susu', 18000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Cendol Susu', 18000)">+</button>
+                            <img src="es cendol.jpg" alt="Es Cendol Dawet Ayu" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Cendol Dawet Ayu', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Cendol Dawet Ayu', 18000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Cendol Susu</h3><span class="menu-price">Rp 18.000</span></div>
-                            <p class="menu-desc">Cendol hijau tradisional dengan santan dan gula aren.</p>
+                            <div class="menu-header"><h3 class="menu-title">Es Cendol Dawet Ayu</h3><span class="menu-price">Rp 18.000</span></div>
+                            <p class="menu-desc">Cendol tepung beras hijau daun suji dengan santan gurih dan gula merah cair.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Es Kelapa Muda.jpg" alt="Es Kelapa" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Kelapa Muda', 30000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Kelapa Muda', 30000)">+</button>
+                            <img src="teh tarik.jpg" alt="Es Teh Tarik Nusantara" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Teh Tarik Nusantara', 17000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Teh Tarik Nusantara', 17000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Kelapa Muda</h3><span class="menu-price">Rp 30.000</span></div>
-                            <p class="menu-desc">Kelapa muda segar dengan es dan sirup.</p>
+                            <div class="menu-header"><h3 class="menu-title">Es Teh Tarik Nusantara</h3><span class="menu-price">Rp 17.000</span></div>
+                            <p class="menu-desc">Teh hitam melati pekat dikocok dengan susu krimer hingga berbusa nikmat.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Kopi Tubruk.jpg" alt="Kopi Tubruk" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Tubruk', 22000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Tubruk', 22000)">+</button>
+                            <img src="kunyit asem.jpg" alt="Es Kunyit Asem Segar" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Kunyit Asem Segar', 16000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Kunyit Asem Segar', 16000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kopi Tubruk</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Kopi hitam tradisional Indonesia.</p>
+                            <div class="menu-header"><h3 class="menu-title">Es Kunyit Asem Segar</h3><span class="menu-price">Rp 16.000</span></div>
+                            <p class="menu-desc">Minuman herbal tradisional segar dari kunyit pilihan, asam jawa, dan gula aren.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="es kopi gula aren.jpg" alt="Kopi Aren" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Susu Gula Aren', 23000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Susu Gula Aren', 23000)">+</button>
+                            <img src="bajigur.jpg" alt="Bajigur Kelapa Muda" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bajigur Kelapa Muda', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bajigur Kelapa Muda', 18000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kopi Susu Gula Aren</h3><span class="menu-price">Rp 23.000</span></div>
-                            <p class="menu-desc">Espresso, susu, dan gula aren.</p>
+                            <div class="menu-header"><h3 class="menu-title">Bajigur Kelapa Muda</h3><span class="menu-price">Rp 18.000</span></div>
+                            <p class="menu-desc">Minuman hangat santan dan gula aren harum pandan dengan irisan kelapa muda.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Kopi Gayo.jpg" alt="Kopi Gayo" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Gayo', 22000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Gayo', 22000)">+</button>
+                            <img src="es teler.jpg" alt="Es Teler Sultan" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Teler Sultan', 25000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Teler Sultan', 25000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kopi Gayo</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Kopi khas Aceh dengan aroma khas.</p>
+                            <div class="menu-header"><h3 class="menu-title">Es Teler Sultan</h3><span class="menu-price">Rp 25.000</span></div>
+                            <p class="menu-desc">Alpukat mentega, nangka harum, kelapa muda, dan mutiara dengan kuah susu spesial.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Kopi Tarik.jpg" alt="Kopi Tarik" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Tarik', 22000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Tarik', 22000)">+</button>
+                            <img src="es jeruk kelapa.jpg" alt="Es Jeruk Peras Kelapa" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Jeruk Peras Kelapa', 19000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Jeruk Peras Kelapa', 19000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kopi Tarik</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Kopi dan susu dengan tekstur berbusa.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="Kopi Toraja.jpg" alt="Kopi Toraja" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kopi Toraja', 24000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kopi Toraja', 24000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kopi Toraja</h3><span class="menu-price">Rp 24.000</span></div>
-                            <p class="menu-desc">Kopi khas Sulawesi dengan cita rasa unik.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="susu coklat.png" alt="Susu Coklat" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Chocolate Milk', 23000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Chocolate Milk', 23000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Chocolate Milk</h3><span class="menu-price">Rp 23.000</span></div>
-                            <p class="menu-desc">Cokelat premium dengan susu segar.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="Strawberry Milk.png" alt="Strawberry Milk" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Strawberry Milk', 25000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Strawberry Milk', 25000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Strawberry Milk</h3><span class="menu-price">Rp 25.000</span></div>
-                            <p class="menu-desc">Susu segar dengan rasa stroberi.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="Taro Milk.jpg" alt="Taro" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Taro Milk', 23000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Taro Milk', 23000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Taro Milk</h3><span class="menu-price">Rp 23.000</span></div>
-                            <p class="menu-desc">Minuman talas dengan susu creamy.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="matcha.jpg" alt="Matcha" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Matcha Latte Nusantara', 25000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Matcha Latte Nusantara', 25000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Matcha Latte Nusantara</h3><span class="menu-price">Rp 25.000</span></div>
-                            <p class="menu-desc">Bubuk matcha premium berpadu dengan susu segar.</p>
+                            <div class="menu-header"><h3 class="menu-title">Es Jeruk Peras Kelapa</h3><span class="menu-price">Rp 19.000</span></div>
+                            <p class="menu-desc">Perasan jeruk pontianak manis segar dipadukan dengan daging kelapa muda.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab Content: Dessert (12 Menu) -->
-            <div id="dessert" class="tab-content">
+            <!-- KATEGORI 3: DESSERT (18 MENU) -->
+            <div id="dessert" class="menu-category">
                 <div class="menu-grid">
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="pisang ijo.jpg" alt="Pisang Ijo" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Pisang Ijo Makassar', 18000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Pisang Ijo Makassar', 18000)">+</button>
+                            <img src="Bika Ambon.jpg" alt="Bika Ambon Medan" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bika Ambon Medan', 22000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bika Ambon Medan', 22000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Pisang Ijo Makassar</h3><span class="menu-price">Rp 18.000</span></div>
-                            <p class="menu-desc">Pisang manis dibalut adonan hijau lembut dengan santan.</p>
+                            <div class="menu-header"><h3 class="menu-title">Bika Ambon Medan</h3><span class="menu-price">Rp 22.000</span></div>
+                            <p class="menu-desc">Kue bersarang lembut khas Medan dengan aroma daun jeruk dan serai yang harum.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="klepon.jpg" alt="Klepon Pandan Gula Merah" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Klepon Pandan Gula Merah', 16000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Klepon Pandan Gula Merah', 16000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Klepon Pandan Gula Merah</h3><span class="menu-price">Rp 16.000</span></div>
+                            <p class="menu-desc">Bola ketan pandan kenyal isi gula aren lumer dengan balutan kelapa parut gurih.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="es pisang ijo.jpg" alt="Es Pisang Ijo Makassar" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Pisang Ijo Makassar', 22000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Pisang Ijo Makassar', 22000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Es Pisang Ijo Makassar</h3><span class="menu-price">Rp 22.000</span></div>
+                            <p class="menu-desc">Pisang raja balut adonan pandan lembut dengan bubur sumsum gurih dan sirup merah.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="serabi solo.jpg" alt="Serabi Notosuman Solo" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Serabi Notosuman Solo', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Serabi Notosuman Solo', 18000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Serabi Notosuman Solo</h3><span class="menu-price">Rp 18.000</span></div>
+                            <p class="menu-desc">Serabi santan lembut pinggiran renyah dengan topping nangka, cokelat, dan keju.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="img-wrapper">
+                            <img src="bubur sumsum.jpg" alt="Bubur Sumsum Candil" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bubur Sumsum Candil', 17000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bubur Sumsum Candil', 17000)">+</button>
+                        </div>
+                        <div class="menu-info">
+                            <div class="menu-header"><h3 class="menu-title">Bubur Sumsum Candil</h3><span class="menu-price">Rp 17.000</span></div>
+                            <p class="menu-desc">Bubur tepung beras lembut dipadukan dengan biji salak ketan kenyal dan kuah kinca.</p>
                         </div>
                     </div>
                     <div class="menu-card">
@@ -622,123 +593,79 @@
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="es teler.jpg" alt="Es Teler" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Teler Spesial', 20000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Teler Spesial', 20000)">+</button>
+                            <img src="dadar gulung.jpg" alt="Dadar Gulung Unti Kelapa" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Dadar Gulung Unti Kelapa', 16000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Dadar Gulung Unti Kelapa', 16000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Teler Spesial</h3><span class="menu-price">Rp 20.000</span></div>
-                            <p class="menu-desc">Campuran buah segar alpukat, nangka, dan kelapa muda.</p>
+                            <div class="menu-header"><h3 class="menu-title">Dadar Gulung Unti Kelapa</h3><span class="menu-price">Rp 16.000</span></div>
+                            <p class="menu-desc">Kulit dadar pandan lembut berisi parutan kelapa manis gula aren.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="dadar gulung.png" alt="Dadar Gulung" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Dadar Gulung', 18000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Dadar Gulung', 18000)">+</button>
+                            <img src="kue lumpur.jpg" alt="Kue Lumpur Kentang Kismis" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kue Lumpur Kentang Kismis', 17000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kue Lumpur Kentang Kismis', 17000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Dadar Gulung</h3><span class="menu-price">Rp 18.000</span></div>
-                            <p class="menu-desc">Kulit pandan lembut dengan isian kelapa dan gula merah.</p>
+                            <div class="menu-header"><h3 class="menu-title">Kue Lumpur Kentang Kismis</h3><span class="menu-price">Rp 17.000</span></div>
+                            <p class="menu-desc">Kue lembut berbahan kentang kukus dan santan dengan topping kismis dan kelapa muda.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="bubur sumsum.png" alt="Bubur Sumsum" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bubur Sumsum', 18000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bubur Sumsum', 18000)">+</button>
+                            <img src="putu mayang.jpg" alt="Putu Mayang Kuah Kinca" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Putu Mayang Kuah Kinca', 17000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Putu Mayang Kuah Kinca', 17000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Bubur Sumsum</h3><span class="menu-price">Rp 18.000</span></div>
-                            <p class="menu-desc">Bubur lembut dari tepung beras dengan kuah gula merah.</p>
+                            <div class="menu-header"><h3 class="menu-title">Putu Mayang Kuah Kinca</h3><span class="menu-price">Rp 17.000</span></div>
+                            <p class="menu-desc">Kue tradisional warna-warni dari tepung beras disajikan dengan kuah santan gula merah.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="klepon.png" alt="Klepon" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Klepon', 18000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Klepon', 18000)">+</button>
+                            <img src="lupis ketan.jpg" alt="Kue Lupis Ketan Gula Aren" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kue Lupis Ketan Gula Aren', 16000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kue Lupis Ketan Gula Aren', 16000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Klepon</h3><span class="menu-price">Rp 18.000</span></div>
-                            <p class="menu-desc">Kue pandan berisi gula merah cair dengan taburan kelapa.</p>
+                            <div class="menu-header"><h3 class="menu-title">Kue Lupis Ketan Gula Aren</h3><span class="menu-price">Rp 16.000</span></div>
+                            <p class="menu-desc">Ketan pulen dibalut kelapa parut gurih dengan siraman gula merah kental.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Es Campur Nusantara.jpg" alt="Es Campur" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Campur Nusantara', 16000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Campur Nusantara', 16000)">+</button>
+                            <img src="onde onde.jpg" alt="Onde-Onde Wijen Kacang Hijau" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Onde-Onde Wijen Kacang Hijau', 16000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Onde-Onde Wijen Kacang Hijau', 16000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Campur Nusantara</h3><span class="menu-price">Rp 16.000</span></div>
-                            <p class="menu-desc">Kesegaran es serut dengan cincau hitam, tape, dan alpukat.</p>
+                            <div class="menu-header"><h3 class="menu-title">Onde-Onde Wijen Kacang Hijau</h3><span class="menu-price">Rp 16.000</span></div>
+                            <p class="menu-desc">Kue ketan goreng berbalut wijen renyah dengan isian kacang hijau kupas lembut.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Kue Cubit Premium Setengah Matang.jpg" alt="Kue Cubit" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kue Cubit Premium Setengah Matang', 37000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kue Cubit Premium Setengah Matang', 37000)">+</button>
+                            <img src="colenak.jpg" alt="Colenak Tape Bakar Bandung" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Colenak Tape Bakar Bandung', 18000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Colenak Tape Bakar Bandung', 18000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Kue Cubit Premium Setengah Matang</h3><span class="menu-price">Rp 37.000</span></div>
-                            <p class="menu-desc">Jajanan khas dengan tekstur empuk dan lumer di tengah.</p>
+                            <div class="menu-header"><h3 class="menu-title">Colenak Tape Bakar Bandung</h3><span class="menu-price">Rp 18.000</span></div>
+                            <p class="menu-desc">Peuyeum Bandung bakar hangat disiram saus gula merah dan kelapa parut sangrai.</p>
                         </div>
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Serabi Solo Tiramisu & Cokelat Lumer.jpg" alt="Serabi" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Serabi Solo Tiramisu & Cokelat Lumer', 32000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Serabi Solo Tiramisu & Cokelat Lumer', 32000)">+</button>
+                            <img src="kue lapis.jpg" alt="Kue Lapis Legit Spesial" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Kue Lapis Legit Spesial', 25000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Kue Lapis Legit Spesial', 25000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Serabi Solo Tiramisu & Cokelat Lumer</h3><span class="menu-price">Rp 32.000</span></div>
-                            <p class="menu-desc">Serabi tradisional dengan krim tiramisu serta lelehan cokelat.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="martabak manis.jpg" alt="Martabak" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Martabak Manis Mini Keju Cokelat', 26000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Martabak Manis Mini Keju Cokelat', 26000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Martabak Manis Mini Keju Cokelat</h3><span class="menu-price">Rp 26.000</span></div>
-                            <p class="menu-desc">Kue martabak tebal bersarang dengan keju cheddar melimpah.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="bika ambon.jpg" alt="Bika Ambon" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bika Ambon Medan Lembut', 38000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bika Ambon Medan Lembut', 38000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Bika Ambon Medan Lembut</h3><span class="menu-price">Rp 38.000</span></div>
-                            <p class="menu-desc">Kue berongga khas Medan dengan aroma daun jeruk.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="putu mayang.jpg" alt="Putu Mayang" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Putu Mayang Kuah Santan', 28000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Putu Mayang Kuah Santan', 28000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Putu Mayang Kuah Santan</h3><span class="menu-price">Rp 28.000</span></div>
-                            <p class="menu-desc">Kue tradisional dengan kuah santan dan gula aren cair.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-wrapper">
-                            <img src="ketan hitam.jpg" alt="Ketan Hitam" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bubur Ketan Hitam Es Krim', 17000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bubur Ketan Hitam Es Krim', 17000)">+</button>
-                        </div>
-                        <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Bubur Ketan Hitam Es Krim</h3><span class="menu-price">Rp 17.000</span></div>
-                            <p class="menu-desc">Bubur ketan hitam legit hangat dengan es krim vanila.</p>
+                            <div class="menu-header"><h3 class="menu-title">Kue Lapis Legit Spesial</h3><span class="menu-price">Rp 25.000</span></div>
+                            <p class="menu-desc">Kue lapis klasik beraroma rempah spekuk dan mentega premium yang lembut di mulut.</p>
                         </div>
                     </div>
                 </div>
@@ -746,84 +673,165 @@
         </div>
     </section>
 
-    <!-- Reservasi & Pemesanan Section -->
-    <section id="reservasi" class="section-padding reservation">
+    <!-- Cabang Kami Section -->
+    <section id="cabang" class="section-padding">
         <div class="container">
-            <p class="section-subtitle">Formulir Pemesanan & Reservasi</p>
-            <h2 class="section-title">Pesan Menu / Meja Sekarang</h2>
-            
-            <div class="form-container">
-                <form id="bookingForm" onsubmit="handleReservation(event)">
+            <div class="text-center">
+                <span class="section-tag">JARINGAN RESTORAN</span>
+                <h2 class="section-title">Pilih Cabang Terdekat Kami</h2>
+                <p class="section-desc">Peta lokasi dan tombol WhatsApp langsung untuk setiap cabang.</p>
+            </div>
+
+            <div class="cabang-grid">
+                <!-- Cabang 1 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Bandung</h3>
+                    <p>Alamat: Jl. Cisangkuy No.60, Citarum, Kec. Bandung Wetan</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Jl.%20Cisangkuy%20No.60,%20Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Neosantara%20Bandung,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Cabang 2 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Bekasi Utara</h3>
+                    <p>Alamat: Jl. Bulevar Bekasi CBD, Marga Mulya</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Summarecon%20Mall%20Bekasi&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567891?text=Halo%20Neosantara%20Bekasi,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Cabang 3 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Jakarta Selatan</h3>
+                    <p>Alamat: Jl. Ampera Raya No.9, Cilandak Tim.</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Jl.%20Ampera%20Raya%20No.9,%20Jakarta%20Selatan&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567892?text=Halo%20Neosantara%20Jakarta%20Selatan,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Cabang 4 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Makassar</h3>
+                    <p>Alamat: Jl. Mutiara Boulevard, Biringkanaya</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Biringkanaya,%20Makassar&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567893?text=Halo%20Neosantara%20Makassar,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Cabang 5 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Jakarta Utara</h3>
+                    <p>Alamat: Jl. Yos Sudarso Lorong X No. 1, Koja</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Jl.%20Yos%20Sudarso,%20Koja,%20Jakarta%20Utara&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567894?text=Halo%20Neosantara%20Jakarta%20Utara,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Cabang 6 -->
+                <div class="cabang-card">
+                    <h3>Neosantara - Bandar Lampung</h3>
+                    <p>Alamat: Jl. Griya Utama No. 57, Way Halim</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Way%20Halim,%20Bandar%20Lampung&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6281234567895?text=Halo%20Neosantara%20Lampung,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservasi Section -->
+    <section id="reservasi" class="section-padding bg-dark-green">
+        <div class="container">
+            <div class="text-center text-white">
+                <span class="section-tag">FORMULIR PEMESANAN & RESERVASI</span>
+                <h2 class="section-title">Pesan Menu / Meja Sekarang</h2>
+            </div>
+
+            <div class="form-box">
+                <form id="reservationForm" onsubmit="handleReservation(event)">
                     <div class="form-group">
-                        <label for="cabangPilihan">Pilih Cabang Tujuan</label>
-                        <select id="cabangPilihan" class="form-control" required>
-                            <option value="0">Neosantara - Bandung (Cisangkuy)</option>
-                            <option value="1">Neosantara - Bekasi Utara</option>
-                            <option value="2">Neosantara - Jakarta Selatan</option>
-                            <option value="3">Neosantara - Makassar</option>
-                            <option value="4">Neosantara - Jakarta Utara</option>
-                            <option value="5">Neosantara - Bandar Lampung</option>
+                        <label>Pilih Cabang Tujuan</label>
+                        <select id="branchSelect" required>
+                            <option value="6281234567890|Neosantara - Bandung">Neosantara - Bandung (Cisangkuy)</option>
+                            <option value="6281234567891|Neosantara - Bekasi Utara">Neosantara - Bekasi Utara</option>
+                            <option value="6281234567892|Neosantara - Jakarta Selatan">Neosantara - Jakarta Selatan</option>
+                            <option value="6281234567893|Neosantara - Makassar">Neosantara - Makassar</option>
+                            <option value="6281234567894|Neosantara - Jakarta Utara">Neosantara - Jakarta Utara</option>
+                            <option value="6281234567895|Neosantara - Bandar Lampung">Neosantara - Bandar Lampung</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" id="nama" class="form-control" placeholder="Nama Anda" required>
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="custName" placeholder="Nama Anda" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="pesanan">Menu yang Dipesan</label>
-                            <input type="text" id="pesanan" class="form-control" placeholder="Klik tanda + / - pada gambar menu di atas" readonly required>
+                            <label>Menu yang Dipesan</label>
+                            <input type="text" id="menuInput" placeholder="Klik tanda + pada menu" readonly required>
                         </div>
                         <div class="form-group">
-                            <label for="totalHarga">Total yang Harus Dibayar</label>
-                            <input type="text" id="totalHarga" class="form-control" value="Rp 0" readonly style="font-weight: bold; color: var(--primary-dark);">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="jumlah">Jumlah Tamu (Orang)</label>
-                            <input type="number" id="jumlah" class="form-control" placeholder="Contoh: 2" min="1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal">Tanggal Kunjungan</label>
-                            <input type="date" id="tanggal" class="form-control" required>
+                            <label>Total yang Harus Dibayar</label>
+                            <input type="text" id="totalPriceInput" value="Rp 0" readonly>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="jam">Waktu / Jam</label>
-                            <input type="time" id="jam" class="form-control" required>
+                            <label>Jumlah Tamu (Orang)</label>
+                            <input type="number" id="guestCount" placeholder="Contoh: 2" min="1" required>
                         </div>
                         <div class="form-group">
-                            <label for="pembayaran">Metode Pembayaran</label>
-                            <select id="pembayaran" class="form-control" required>
-                                <option value="Bayar di Tempat (Tunai)">Bayar di Tempat (Tunai)</option>
-                                <option value="Transfer Bank">Transfer Bank</option>
+                            <label>Tanggal Kunjungan</label>
+                            <input type="date" id="visitDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Waktu / Jam</label>
+                            <select id="visitTime" required>
+                                <option value="">Pilih Jam</option>
+                                <option value="11:00 WIB">11:00 WIB</option>
+                                <option value="13:00 WIB">13:00 WIB</option>
+                                <option value="15:00 WIB">15:00 WIB</option>
+                                <option value="18:30 WIB">18:30 WIB</option>
+                                <option value="20:00 WIB">20:00 WIB</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Metode Pembayaran</label>
+                            <select id="paymentMethod" required>
+                                <option value="Bayar di Kasir">Bayar di Kasir</option>
                                 <option value="QRIS">QRIS</option>
-                                <option value="E-Wallet">E-Wallet (GoPay/OVO/Dana)</option>
+                                <option value="Transfer Bank">Transfer Bank</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="catatan">Catatan Khusus (Opsional)</label>
-                        <textarea id="catatan" class="form-control" rows="3" placeholder="Contoh: Minta meja dekat jendela..."></textarea>
+                        <label>Catatan Khusus (Opsional)</label>
+                        <textarea id="notes" rows="3" placeholder="Contoh: Minta meja dekat jendela..."></textarea>
                     </div>
 
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <button type="button" onclick="resetPesanan()" class="btn-gold" style="background-color: #a94442; flex: 1; border: none; cursor: pointer; border-radius: 6px; color: #fff; font-weight: bold;">Reset Pesanan</button>
-                        <button type="submit" class="btn-gold" style="flex: 2;">Kirim Pesanan ke WhatsApp Cabang</button>
+                    <div class="form-buttons">
+                        <button type="button" class="btn-reset" onclick="resetPesanan()">Reset Pesanan</button>
+                        <button type="submit" class="btn-submit">Kirim Pesanan ke WhatsApp Cabang</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -838,7 +846,7 @@
                 <div class="footer-col">
                     <h4>Sosial Media & Kontak</h4>
                     <p>Ikuti promo terbaru kami di Instagram:</p>
-                    <a href="https://www.instagram.com/neosantaragram" target="_blank" style="display: inline-block; margin-top: 8px; color: var(--accent-gold); font-weight: bold; text-decoration: none; border: 1px solid var(--accent-gold); padding: 6px 14px; border-radius: 20px;">
+                    <a href="https://www.instagram.com/neosantaragram" target="_blank" class="btn-ig-footer">
                         @neosantaragram
                     </a>
                 </div>
@@ -848,7 +856,7 @@
             </div>
         </div>
     </footer>
-    <!-- JavaScript External -->
+
     <script src="script.js"></script>
 </body>
 </html>
