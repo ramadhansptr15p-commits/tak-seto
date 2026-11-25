@@ -972,7 +972,6 @@
                             <option value="6283193450697|Neosantara - Bandar Lampung">Neosantara - Bandar Lampung</option>
                         </select>
                     </div>
-456789
                     <div class="form-group">
                         <label>Nama Lengkap</label>
                         <input type="text" id="custName" placeholder="Nama Anda" required>
@@ -1062,6 +1061,26 @@
         </div>
     </footer>
 
+    <!-- Audio Otomatis Tanpa Tombol -->
+<audio id="bg-music" loop>
+    <source src="lagu4.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const bgMusic = document.getElementById("bg-music");
+    
+    // Coba putar langsung saat halaman dibuka
+    bgMusic.play().catch(() => {
+        // Jika diblokir browser, langsung putar saat layar disentuh/diklik pertama kali
+        document.addEventListener("click", () => {
+            bgMusic.play();
+        }, { once: true });
+        
+        document.addEventListener("touchstart", () => {
+            bgMusic.play();
+        }, { once: true });
+    });
+</script>
     <script src="script.js"></script>
 </body>
 </html>
