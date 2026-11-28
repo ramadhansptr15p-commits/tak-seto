@@ -9,21 +9,27 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="brand-logo-container">
-                <img src="logo.jpeg" alt="Logo Neosantara" class="brand-logo-img">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#menu">Menu & Harga</a></li>
-                <li><a href="#cabang">Cabang Kami</a></li>
-                <li><a href="#reservasi">Pesan & Reservasi</a></li>
-            </ul>
-            <a href="#reservasi" class="btn-gold">Pesan Sekarang</a>
-        </div>
-    </header>
+<!-- Header Navigation -->
+<header>
+    <div class="container nav-container">
+        <a href="#" class="brand-logo-container">
+            <img src="logo.jpeg" alt="Logo Neosantara" class="brand-logo-img">
+        </a>
+        
+        <!-- TARUH KODE DI SINI -->
+        <ul class="nav-links">
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#menu">Menu & Harga</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#ballroom">Ballroom</a></li>
+            <li><a href="#ulasan">Ulasan</a></li>
+            <li><a href="#cabang">Cabang Kami</a></li>
+            <li><a href="#reservasi">Pesan & Reservasi</a></li>
+        </ul>
+
+        <a href="#reservasi" class="btn-gold">Pesan Sekarang</a>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -35,14 +41,80 @@
         </div>
     </section>
 
-    <!-- Tentang Section -->
+<!-- Tentang Section -->
     <section id="tentang" class="section-padding">
         <div class="container text-center">
             <span class="section-tag">FILOSOFI KAMI</span>
             <h2 class="section-title">Warisan Rasa Asli Indonesia</h2>
-            <p class="section-desc">Neosantara hadir membawa cita rasa masakan tradisional dari Sabang sampai Merauke dengan sentuhan penyajian modern yang elegan, nyaman untuk keluarga maupun acara spesial.</p>
+            <p class="section-desc">Neosantara hadir membawa cita rasa masakan tradisional dari Sabang sampai Merauke dengan sentuhan penyajian modern yang elegan...</p>
         </div>
     </section>
+
+    <!-- 👉 TARUH KODE GALERI DI SINI -->
+    <section id="galeri" class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">SUASANA KAMI</span>
+                <h2 class="section-title">Galeri & Ruangan Restoran</h2>
+                <p class="section-desc">Suasana interior mewah, kenyamanan tempat, meja makan, dan area bersantap eksklusif.</p>
+            </div>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div class="gallery-item"><img src="Interior Restoran Neosantara.png" alt="Interior Restoran Neosantara" style="width:100%; height:240px; object-fit:cover; border-radius:8px;"></div>
+                <div class="gallery-item"><img src="Dining Area.png" alt="Dining Area" style="width:100%; height:240px; object-fit:cover; border-radius:8px;"></div>
+                <div class="gallery-item"><img src="Suasana Meja Makan.png" alt="Suasana Meja Makan" style="width:100%; height:240px; object-fit:cover; border-radius:8px;"></div>
+                <div class="gallery-item"><img src="Ruang VIP Neosantara.png" alt="Ruang VIP Neosantara" style="width:100%; height:240px; object-fit:cover; border-radius:8px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informasi Ballroom Section -->
+<section id="ballroom" class="section-padding bg-cream">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-tag">ACARA & PERNIKAHAN</span>
+            <h2 class="section-title">Ballroom & Paket Acara</h2>
+            <p class="section-desc">Informasi lengkap paket wedding, ulang tahun, meeting, serta kapasitas ruangan.</p>
+        </div>
+        <div class="ballroom-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px;">
+            <div class="ballroom-card" style="background:#fff; padding:25px; border-radius:10px; border:1px solid #d4af37;">
+                <h3 style="color:#d4af37; margin-bottom: 10px;">Wedding Banquet Package</h3>
+                <p style="margin-bottom: 8px;"><strong>Kapasitas:</strong> Hingga 500 Tamu</p>
+                <p style="color:#555; margin-bottom: 15px;">Termasuk dekorasi pelaminan tradisional modern, catering menu pilihan Nusantara, dan sound system eksklusif.</p>
+                <p style="font-weight:bold; color:#141f16;">Mulai dari Rp 25.000.000</p>
+            </div>
+            <div class="ballroom-card" style="background:#fff; padding:25px; border-radius:10px; border:1px solid #d4af37;">
+                <h3 style="color:#d4af37; margin-bottom: 10px;">Meeting & Birthday Party</h3>
+                <p style="margin-bottom: 8px;"><strong>Kapasitas:</strong> 50 - 150 Tamu</p>
+                <p style="color:#555; margin-bottom: 15px;">Ruangan privat ber-AC lengkap dengan proyektor, layar, dan set menu prasmanan spesial.</p>
+                <p style="font-weight:bold; color:#141f16;">Mulai dari Rp 5.000.000</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ulasan Pelanggan Section -->
+<section id="ulasan" class="section-padding">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-tag">TESTIMONI</span>
+            <h2 class="section-title">Ulasan & Rating Pelanggan</h2>
+            <p class="section-desc">Testimoni langsung dari para pengunjung setia Neosantara.</p>
+        </div>
+        <div class="review-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px;">
+            <div class="review-card" style="background:#141f16; color:#fff; padding:25px; border-radius:10px;">
+                <p style="color:#d4af37; font-size:18px; margin-bottom:10px;">★★★★★ (5/5)</p>
+                <p style="font-style:italic; margin-bottom:15px;">"Suasananya mirip restoran kelas atas Plataran, rasa masakannya otentik dan harganya sangat bersahabat."</p>
+                <p style="font-size:14px; color:#d4af37; font-weight:600;">- Prabowo (Jakarta)</p>
+            </div>
+            <div class="review-card" style="background:#141f16; color:#fff; padding:25px; border-radius:10px;">
+                <p style="color:#d4af37; font-size:18px; margin-bottom:10px;">★★★★★ (5/5)</p>
+                <p style="font-style:italic; margin-bottom:15px;">"Tempat terbaik untuk acara keluarga dan meeting. Pelayanannya ramah dan makanannya cepat saji."</p>
+                <p style="font-size:14px; color:#d4af37; font-weight:600;">- Gibran (Surakarta)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Menu Section (54 Menu) -->
     <section id="menu" class="section-padding bg-cream">
@@ -583,13 +655,13 @@
                     </div>
                     <div class="menu-card">
                         <div class="img-wrapper">
-                            <img src="Es Campur Nusantara.jpg" alt="Es Campur Nusantara" class="menu-img">
-                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Es Campur Nusantara', 22000)">-</button>
-                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Es Campur Nusantara', 22000)">+</button>
+                            <img src="Bir Pletok.jpg" alt="Bir Pletok" class="menu-img">
+                            <button type="button" class="btn-minus-img" onclick="kurangMenu('Bir Pletok', 22000)">-</button>
+                            <button type="button" class="btn-plus-img" onclick="pilihMenu('Bir Pletok', 22000)">+</button>
                         </div>
                         <div class="menu-info">
-                            <div class="menu-header"><h3 class="menu-title">Es Campur Nusantara</h3><span class="menu-price">Rp 22.000</span></div>
-                            <p class="menu-desc">Es serut segar dengan alpukat, nangka, kelapa muda, cincau, dan sirup cocopandan.</p>
+                            <div class="menu-header"><h3 class="menu-title">Bir Pletok</h3><span class="menu-price">Rp 22.000</span></div>
+                            <p class="menu-desc">Minuman tradisional Betawi tanpa alkohol yang dibuat dari jahe, serai, kayu secang, dan rempah-rempah.</p>
                         </div>
                     </div>
                     <div class="menu-card">
@@ -1080,7 +1152,194 @@
             bgMusic.play();
         }, { once: true });
     });
-</script>
-    <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Neosantara</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .header h2 {
+            color: #d4af37;
+            margin: 0;
+        }
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            color: #d4af37;
+        }
+        .btn-action {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-action:hover {
+            background: #e6c547;
+        }
+        .login-box {
+            text-align: center;
+            padding: 40px;
+        }
+        .login-box input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background: #222;
+            color: #fff;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>NEOSANTARA MANAGEMENT</h2>
+        <a href="index.html" class="back-link">← Kembali ke Website Utama</a>
+    </div>
+
+    <div class="container">
+        <!-- Bagian Login Admin -->
+        <div id="adminLoginBox" class="login-box">
+            <h3>Dashboard Admin Pesanan Masuk</h3>
+            <p style="color: #aaa; margin-bottom: 20px;">Masukkan kata sandi untuk melihat daftar pesanan secara real-time.</p>
+            <input type="password" id="adminPassword" placeholder="Kata Sandi (admin123)">
+            <button class="btn-action" onclick="checkAdminLogin()">Masuk Dashboard</button>
+            <p id="loginError" style="color: #ff6b6b; margin-top: 10px; display: none;">Kata sandi salah! Gunakan: admin123</p>
+        </div>
+
+        <!-- Bagian Dashboard Utama (Disembunyikan Sebelum Login) -->
+        <div id="adminDashboardContent" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 style="color: #d4af37; margin: 0;">Data Pesanan Masuk Pelanggan</h3>
+                <button class="btn-action" style="background: #a93226; color: #fff;" onclick="logoutAdmin()">Keluar / Lock</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Pesanan</th>
+                        <th>Nama Pemesan</th>
+                        <th>Menu Dipesan</th>
+                        <th>Total Bayar</th>
+                        <th>Metode Bayar</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="adminOrderTable">
+                    <!-- Data pesanan akan masuk otomatis ke sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function checkAdminLogin() {
+            const passInput = document.getElementById('adminPassword').value;
+            const errorText = document.getElementById('loginError');
+            const loginBox = document.getElementById('adminLoginBox');
+            const dashboardContent = document.getElementById('adminDashboardContent');
+
+            if (passInput === 'admin123') {
+                loginBox.style.display = 'none';
+                dashboardContent.style.display = 'block';
+                errorText.style.display = 'none';
+                document.getElementById('adminPassword').value = ''; 
+                
+                loadOrdersToTable();
+            } else {
+                errorText.style.display = 'block';
+            }
+        }
+
+        function loadOrdersToTable() {
+            const tableBody = document.getElementById('adminOrderTable');
+            let daftarPesanan = JSON.parse(localStorage.getItem('neosantaraOrders')) || [];
+
+            if (daftarPesanan.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align: center; color: #ff6b6b; padding: 25px;">
+                            Belum ada pesanan masuk.<br><br>
+                            <button class="btn-action" onclick="tambahDataTest()">+ Buat Data Test Otomatis</button>
+                        </td>
+                    </tr>`;
+                return;
+            }
+
+            let htmlContent = '';
+            daftarPesanan.forEach(item => {
+                htmlContent += `
+                    <tr>
+                        <td>${item.id || '-'}</td>
+                        <td>${item.nama || '-'}</td>
+                        <td>${item.menu || '-'}</td>
+                        <td>${item.total || '-'}</td>
+                        <td>${item.metode || '-'}</td>
+                        <td><span style="background: #d4af37; color: #000; padding: 3px 8px; border-radius: 4px; font-weight: bold;">${item.status || 'Diproses'}</span></td>
+                    </tr>
+                `;
+            });
+            tableBody.innerHTML = htmlContent;
+        }
+
+        function tambahDataTest() {
+            const dataDummy = [
+                { id: '#NS-8888', nama: 'Budi Test', menu: 'Nasi Uduk Spesial (Bandung)', total: 'Rp 55.000', metode: 'Bayar di Kasir', status: 'Diproses' }
+            ];
+            localStorage.setItem('neosantaraOrders', JSON.stringify(dataDummy));
+            alert('Data test berhasil dimasukkan!');
+            loadOrdersToTable();
+        }
+
+        function logoutAdmin() {
+            document.getElementById('adminLoginBox').style.display = 'block';
+            document.getElementById('adminDashboardContent').style.display = 'none';
+        }
+    </script>
+<script src="script.js"></script>
 </body>
 </html>
